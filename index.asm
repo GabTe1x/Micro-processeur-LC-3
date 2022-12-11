@@ -4,7 +4,7 @@
 
 main:   LEA R1, string  ;Chargement de la chaîne
         LD R2, char     ;Chargement de la lettre, NB: LEA!=LD
-        BR index
+        JSR index
         TRAP x25
 
 index:  ADD R6, R6, -3  ;Prologue
