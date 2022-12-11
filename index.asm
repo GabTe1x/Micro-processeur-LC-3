@@ -33,7 +33,7 @@ fino:   LDR R1, R6, 0   ;Épilogue
         LDR R2, R6, 1
         LDR R3, R6, 2
         ADD R6, R6, 3
-        ret
+        RET
 
 string: .STRINGZ "STRING"
 
