@@ -9,7 +9,7 @@ main:   LEA R1, string  ;Chargement de la chaîne
 
         ;; index
         ;;@param R1 adresse de la chaîne de caractères
-        ;;@param R2 adresse du premier caractère
+        ;;@param R2 adresse du caractère recherché
         ;;@return R0 adresse de la première apparition du caractère
 
 index:  ADD R6, R6, -3  ;Prologue
