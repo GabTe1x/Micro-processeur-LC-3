@@ -7,6 +7,11 @@ main:   LEA R1, string  ;Chargement de la chaîne
         JSR index
         TRAP x25
 
+        ;; index
+        ;;@param R1 adresse de la chaîne de caractères
+        ;;@param R2 adresse du premier caractère
+        ;;@return R0 adresse de la première apparition du caractère
+
 index:  ADD R6, R6, -3  ;Prologue
         STR R1, R6, 0
         STR R2, R6, 1
