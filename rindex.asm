@@ -7,6 +7,11 @@ main:   LEA R1, string  ;Chargement de la chaîne
         JSR rindex
         TRAP x25
 
+        ;; rindex
+        ;;@param R1 adresse de la chaîne de caractères
+        ;;@param R2 adresse du caractère recherché
+        ;;@return R0 adresse de la dernière apparition du caractère
+
 rindex: ADD R6, R6, -4  ;Prologue
         STR R1, R6, 0
         STR R2, R2, 1
