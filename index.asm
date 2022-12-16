@@ -19,16 +19,17 @@ index:  ADD R6, R6, -3  ;Prologue
 
         NOT R2, R2	;Inverser R2
         ADD R2, R2, 1   ;Ajouter -1
-        AND R0, R0, 0   ;Mise à 0 du compteur/résultat
+        ;;AND R0, R0, 0   ;Mise à 0 du compteur/résultat
         AND R3, R3, 0   ;-Lettre courante
 
 loop:   LDR R3, R1, 0   ;Chargement dans R3 l'adresse de la chaîne
+	ADD R0, R1, 0
         BRz finn        ;Test de fin de chaîne
 
         ADD R3, R3, R2  ;Verifier si R3 est la meme lettre que R2
         BRz fino        ;La première occurence a été trouvé
 
-        ADD R0, R0, 1   ;Incrémenter la position
+        ;;ADD R0, R0, 1   ;Incrémenter la position
         ADD R1, R1, 1   ;Incrémentation du pointeur
         BR loop
 
