@@ -20,7 +20,7 @@ rindex: ADD R6, R6, -4  ;Prologue
 
         NOT R2, R2	;Inverser R2
         ADD R2, R2, 1   ;Ajouter -1
-        AND R0, R0, 0   ;Mise à 0 du compteur/résultat
+        ;;AND R0, R0, 0   ;Mise à 0 du compteur/résultat
         AND R3, R3, 0   ;-Lettre courante
         AND R4, R4, 0   ;-Dernière position où le char a été trouvé
 
@@ -33,7 +33,7 @@ loop:   LDR R3, R1, 0   ;Chargement dans R3 l'adresse de la chaîne
         BR incr
 
 finn:   AND R0, R0, 0   ;Caractère introuvable
-        AND R0, R0, 0
+	;;AND R0, R0, 0
         ADD R0, R4, 0   ;Chargement de la position de la dernière occurence trouvé
 
         LDR R1, R6, 0
@@ -43,10 +43,11 @@ finn:   AND R0, R0, 0   ;Caractère introuvable
         ADD R6, R6, 4
         RET
 
-find:   AND R4, R4, 0
-        ADD R4, R0, 0   ;savegarde de la position du dernier char trouvé
+find:   ;;AND R4, R4, 0
+	ADD R4, R1, 0
+        ;;ADD R4, R0, 0   ;savegarde de la position du dernier char trouvé
 
-incr:   ADD R0, R0, 1   ;Incrémenter la position
+incr:   ;;ADD R0, R0, 1   ;Incrémenter la position
         ADD R1, R1, 1   ;Incrémentation du pointeur
         BR loop
 
